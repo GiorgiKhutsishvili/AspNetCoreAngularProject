@@ -1,0 +1,14 @@
+D:\NetCoreAngular\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.csproj.CoreCompileInputs.cache
+D:\NetCoreAngular\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.RazorAssemblyInfo.cache
+D:\NetCoreAngular\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.RazorAssemblyInfo.cs
+D:\NetCoreAngular\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.AssemblyInfoInputs.cache
+D:\NetCoreAngular\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.AssemblyInfo.cs
+D:\NetCoreAngular\CoreAngular\CoreAngular\bin\Debug\netcoreapp2.2\CoreAngular.deps.json
+D:\NetCoreAngular\CoreAngular\CoreAngular\bin\Debug\netcoreapp2.2\CoreAngular.runtimeconfig.json
+D:\NetCoreAngular\CoreAngular\CoreAngular\bin\Debug\netcoreapp2.2\CoreAngular.runtimeconfig.dev.json
+D:\NetCoreAngular\CoreAngular\CoreAngular\bin\Debug\netcoreapp2.2\CoreAngular.dll
+D:\NetCoreAngular\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.RazorTargetAssemblyInfo.cache
+D:\NetCoreAngular\CoreAngular\CoreAngular\bin\Debug\netcoreapp2.2\CoreAngular.pdb
+D:\NetCoreAngular\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.dll
+D:\NetCoreAngular\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.pdb
+D:\NetCoreAngular\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.csprojAssemblyReference.cache

@@ -1,0 +1,13 @@
+C:\Users\USER\Documents\Visual Studio 2017\Projects\AspNetCoreAngular\AspNetCoreAngular\bin\Debug\netcoreapp2.2\AspNetCoreAngular.deps.json
+C:\Users\USER\Documents\Visual Studio 2017\Projects\AspNetCoreAngular\AspNetCoreAngular\bin\Debug\netcoreapp2.2\AspNetCoreAngular.runtimeconfig.json
+C:\Users\USER\Documents\Visual Studio 2017\Projects\AspNetCoreAngular\AspNetCoreAngular\bin\Debug\netcoreapp2.2\AspNetCoreAngular.runtimeconfig.dev.json
+C:\Users\USER\Documents\Visual Studio 2017\Projects\AspNetCoreAngular\AspNetCoreAngular\bin\Debug\netcoreapp2.2\AspNetCoreAngular.dll
+C:\Users\USER\Documents\Visual Studio 2017\Projects\AspNetCoreAngular\AspNetCoreAngular\bin\Debug\netcoreapp2.2\AspNetCoreAngular.pdb
+C:\Users\USER\Documents\Visual Studio 2017\Projects\AspNetCoreAngular\AspNetCoreAngular\obj\Debug\netcoreapp2.2\AspNetCoreAngular.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\Visual Studio 2017\Projects\AspNetCoreAngular\AspNetCoreAngular\obj\Debug\netcoreapp2.2\AspNetCoreAngular.RazorAssemblyInfo.cache
+C:\Users\USER\Documents\Visual Studio 2017\Projects\AspNetCoreAngular\AspNetCoreAngular\obj\Debug\netcoreapp2.2\AspNetCoreAngular.RazorAssemblyInfo.cs
+C:\Users\USER\Documents\Visual Studio 2017\Projects\AspNetCoreAngular\AspNetCoreAngular\obj\Debug\netcoreapp2.2\AspNetCoreAngular.AssemblyInfoInputs.cache
+C:\Users\USER\Documents\Visual Studio 2017\Projects\AspNetCoreAngular\AspNetCoreAngular\obj\Debug\netcoreapp2.2\AspNetCoreAngular.AssemblyInfo.cs
+C:\Users\USER\Documents\Visual Studio 2017\Projects\AspNetCoreAngular\AspNetCoreAngular\obj\Debug\netcoreapp2.2\AspNetCoreAngular.RazorTargetAssemblyInfo.cache
+C:\Users\USER\Documents\Visual Studio 2017\Projects\AspNetCoreAngular\AspNetCoreAngular\obj\Debug\netcoreapp2.2\AspNetCoreAngular.dll
+C:\Users\USER\Documents\Visual Studio 2017\Projects\AspNetCoreAngular\AspNetCoreAngular\obj\Debug\netcoreapp2.2\AspNetCoreAngular.pdb
