@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
+using CoreAngular.Persistance;
 
 namespace AspNetCoreAngular
 {
@@ -34,6 +35,10 @@ namespace AspNetCoreAngular
 
             //services.AddAutoMapper(this.GetType().Assembly);
             //services.AddAutoMapper(typeof(Startup));
+
+            services.AddScoped<IVehicleRepository, VehicleRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             services.AddAutoMapper();
 
             services.AddDbContext<VegaDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConnectionString")));
