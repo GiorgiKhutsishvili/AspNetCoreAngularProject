@@ -1,5 +1,6 @@
 ﻿using AspNetCoreAngular.Persistance;
 using System.Threading.Tasks;
+using CoreAngular.Core;
 
 namespace CoreAngular.Persistance
 {

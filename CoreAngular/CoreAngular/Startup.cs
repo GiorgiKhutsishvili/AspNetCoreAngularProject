@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
+using CoreAngular.Core;
 using CoreAngular.Persistance;
 
 namespace AspNetCoreAngular

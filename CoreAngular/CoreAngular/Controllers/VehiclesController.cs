@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AspNetCoreAngular.Persistance;
 using AutoMapper;
+using CoreAngular.Core;
 using CoreAngular.Models;
-using CoreAngular.Persistance;
 using CoreAngular.Resources;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -64,6 +63,7 @@ namespace CoreAngular.Controllers
 
             await unitOfWork.CompleteAsync();
 
+            vehicle = await repository.GetVehicle(vehicle.Id);
             var result = mapper.Map<Vehicle, SaveVehicleResource>(vehicle);
 
             return Ok(result);

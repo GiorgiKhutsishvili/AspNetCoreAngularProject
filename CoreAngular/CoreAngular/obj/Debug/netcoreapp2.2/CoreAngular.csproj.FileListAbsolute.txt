@@ -26,3 +26,17 @@ C:\Users\gio\Documents\GitHub\AspNetCoreAngularProject\CoreAngular\CoreAngular\o
 C:\Users\gio\Documents\GitHub\AspNetCoreAngularProject\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.RazorTargetAssemblyInfo.cache
 C:\Users\gio\Documents\GitHub\AspNetCoreAngularProject\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.dll
 C:\Users\gio\Documents\GitHub\AspNetCoreAngularProject\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.pdb
+C:\Users\USER\Desktop\AspNetCoreAngularProject\CoreAngular\CoreAngular\bin\Debug\netcoreapp2.2\CoreAngular.deps.json
+C:\Users\USER\Desktop\AspNetCoreAngularProject\CoreAngular\CoreAngular\bin\Debug\netcoreapp2.2\CoreAngular.runtimeconfig.json
+C:\Users\USER\Desktop\AspNetCoreAngularProject\CoreAngular\CoreAngular\bin\Debug\netcoreapp2.2\CoreAngular.runtimeconfig.dev.json
+C:\Users\USER\Desktop\AspNetCoreAngularProject\CoreAngular\CoreAngular\bin\Debug\netcoreapp2.2\CoreAngular.dll
+C:\Users\USER\Desktop\AspNetCoreAngularProject\CoreAngular\CoreAngular\bin\Debug\netcoreapp2.2\CoreAngular.pdb
+C:\Users\USER\Desktop\AspNetCoreAngularProject\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\AspNetCoreAngularProject\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.RazorAssemblyInfo.cache
+C:\Users\USER\Desktop\AspNetCoreAngularProject\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.RazorAssemblyInfo.cs
+C:\Users\USER\Desktop\AspNetCoreAngularProject\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\AspNetCoreAngularProject\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.AssemblyInfo.cs
+C:\Users\USER\Desktop\AspNetCoreAngularProject\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.RazorTargetAssemblyInfo.cache
+C:\Users\USER\Desktop\AspNetCoreAngularProject\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.dll
+C:\Users\USER\Desktop\AspNetCoreAngularProject\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.pdb
+C:\Users\USER\Desktop\AspNetCoreAngularProject\CoreAngular\CoreAngular\obj\Debug\netcoreapp2.2\CoreAngular.csprojAssemblyReference.cache

@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using CoreAngular.Models;
 
-namespace CoreAngular.Persistance
+namespace CoreAngular.Core
 {
     public interface IVehicleRepository
     {
