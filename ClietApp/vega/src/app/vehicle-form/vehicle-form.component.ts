@@ -1,6 +1,5 @@
 import { VehicleService } from '../services/vehicle.service';
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-vehicle-form',
   templateUrl: './vehicle-form.component.html',
@@ -12,7 +11,8 @@ export class VehicleFormComponent implements OnInit {
   models: any[];
   features;
   vehicle: any = {
-    features: []
+    features: [],
+    contact: {}
   };
 
   constructor(private vehicleService: VehicleService) { }
@@ -33,13 +33,28 @@ export class VehicleFormComponent implements OnInit {
 
   }
 
-  onFeatureToggle(featureId, $event){
-    if($event.target.checked)
+  onFeatureToggle(featureId, $event) {
+    if ($event.target.checked)
       this.vehicle.features.push(featureId);
-    else{
+    else {
       var index = this.vehicle.features.indexOf(featureId);
       this.vehicle.features.splice(index, 1);
     }
+  }
+
+  submit() {
+    this.vehicleService.create(this.vehicle)
+      .subscribe(
+        x => console.log(x)
+      );
+
+    // x =>{
+    //   this.toastr.success('წარმატებით');
+    //   console.log(x)
+    // },
+    // err => {
+    //   this.toastr.error('შეცდომა');
+    // }
   }
 
 
