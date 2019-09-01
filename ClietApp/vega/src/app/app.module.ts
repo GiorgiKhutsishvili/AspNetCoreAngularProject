@@ -30,7 +30,8 @@ import { AppComponent } from './app.component';
       preventDuplicates: true,
     }),
     RouterModule.forRoot([
-      { path: 'vehicles/new', component: VehicleFormComponent }
+      { path: 'vehicles/new', component: VehicleFormComponent },
+      { path: 'vehicles/:id', component: VehicleFormComponent }
     ])
   ],
   providers: [
