@@ -30,6 +30,15 @@ namespace CoreAngular.Persistance
                 .SingleOrDefaultAsync(v => v.Id == id);
         }
 
+        public async Task<IEnumerable<Vehicle>> GetVehicles()
+        {
+            return await context.Vehicles
+                .Include(v => v.Model)
+                  .ThenInclude(m => m.Make)
+                .Include(v => v.Features)
+                  .ThenInclude(vf => vf.Feature)
+                .ToListAsync();
+        }
 
         public void Add(Vehicle vehicle)
         {

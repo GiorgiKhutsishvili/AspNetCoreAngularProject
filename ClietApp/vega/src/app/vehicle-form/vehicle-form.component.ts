@@ -53,11 +53,11 @@ export class VehicleFormComponent implements OnInit {
       this.makes = data[0];
       this.features = data[1];
 
-      if (this.vehicle.id){
-        this.setVehicle(<any> data[2]);
+      if (this.vehicle.id) {
+        this.setVehicle(<any>data[2]);
         this.populateModels();
       }
-        
+
 
     }, err => {
       if (err.status == 404)
@@ -84,7 +84,7 @@ export class VehicleFormComponent implements OnInit {
 
   }
 
- 
+
   private setVehicle(v: Vehicle) {
     this.vehicle.id = v.id;
     this.vehicle.makeId = v.make.id;
@@ -100,10 +100,9 @@ export class VehicleFormComponent implements OnInit {
   onMakeChange() {
     this.populateModels();
     delete this.vehicle.modelId;
-
   }
 
-  private populateModels(){
+  private populateModels() {
     var selectedMake = this.makes.find(m => m.id == this.vehicle.makeId);
     this.models = selectedMake ? selectedMake.models : [];
   }
@@ -118,18 +117,28 @@ export class VehicleFormComponent implements OnInit {
   }
 
   submit() {
-    if(this.vehicle.id){
+    if (this.vehicle.id) {
       this.vehicleService.update(this.vehicle)
-        .subscribe(x=> {
+        .subscribe(x => {
           this.toastrService.success('The vehicle was successfully updated');
         })
     }
-    else{
+    else {
       this.vehicleService.create(this.vehicle)
-      .subscribe(x => console.log(x));
+        .subscribe(x => console.log(x));
     }
-    
+
   }
+
+  delete() {
+    if (confirm("Are you sure?")) {
+      this.vehicleService.delete(this.vehicle.id)
+        .subscribe(x => {
+          console.log(x)
+        });
+    }
+  }
+
 
 
 }
