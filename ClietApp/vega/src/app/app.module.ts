@@ -32,8 +32,10 @@ import { VehicleListComponent } from './vehicle-list/vehicle-list.component'
       preventDuplicates: true,
     }),
     RouterModule.forRoot([
+      { path: '', redirectTo: 'vehicles', pathMatch: 'full' },
       { path: 'vehicles/new', component: VehicleFormComponent },
-      { path: 'vehicles/:id', component: VehicleFormComponent }
+      { path: 'vehicles/:id', component: VehicleFormComponent },
+      { path: 'vehicles', component: VehicleListComponent }
     ])
   ],
   providers: [

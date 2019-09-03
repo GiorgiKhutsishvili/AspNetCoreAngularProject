@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CoreAngular.Core;
+using CoreAngular.Core.Models;
 
 namespace CoreAngular.Persistance
 {
@@ -30,14 +31,18 @@ namespace CoreAngular.Persistance
                 .SingleOrDefaultAsync(v => v.Id == id);
         }
 
-        public async Task<IEnumerable<Vehicle>> GetVehicles()
+        public async Task<IEnumerable<Vehicle>> GetVehicles(Filter filter)
         {
-            return await context.Vehicles
+            var query = context.Vehicles
                 .Include(v => v.Model)
                   .ThenInclude(m => m.Make)
                 .Include(v => v.Features)
-                  .ThenInclude(vf => vf.Feature)
-                .ToListAsync();
+                  .ThenInclude(vf => vf.Feature).AsQueryable();
+
+            if (filter.MakeId.HasValue)
+                query = query.Where(v => v.Model.MakeId == filter.MakeId.Value);
+
+            return await query.ToListAsync();
         }
 
         public void Add(Vehicle vehicle)

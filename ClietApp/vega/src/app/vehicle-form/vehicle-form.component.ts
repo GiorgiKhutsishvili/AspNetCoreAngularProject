@@ -134,7 +134,7 @@ export class VehicleFormComponent implements OnInit {
     if (confirm("Are you sure?")) {
       this.vehicleService.delete(this.vehicle.id)
         .subscribe(x => {
-          console.log(x)
+          this.router.navigate(['/vehicles']);
         });
     }
   }

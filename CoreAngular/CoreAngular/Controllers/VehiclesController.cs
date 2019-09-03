@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using CoreAngular.Core;
+using CoreAngular.Core.Models;
 using CoreAngular.Models;
 using CoreAngular.Resources;
 using Microsoft.AspNetCore.Http;
@@ -100,9 +101,10 @@ namespace CoreAngular.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<VehicleResource>> GetVehicles()
+        public async Task<IEnumerable<VehicleResource>> GetVehicles([FromQuery] FilterResource filterResource)
         {
-            var vehicles = await repository.GetVehicles();
+            var filter = mapper.Map<FilterResource, Filter>(filterResource);
+            var vehicles = await repository.GetVehicles(filter);
 
             return mapper.Map<IEnumerable<Vehicle>, IEnumerable<VehicleResource>>(vehicles);
         }

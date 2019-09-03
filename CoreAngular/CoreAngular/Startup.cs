@@ -31,7 +31,7 @@ namespace AspNetCoreAngular
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors(option => option.AddPolicy("VegaPolicy", builder => {
-                builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials();
             }));
 
             //services.AddAutoMapper(this.GetType().Assembly);

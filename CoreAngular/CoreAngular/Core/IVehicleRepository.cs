@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using CoreAngular.Core.Models;
 using CoreAngular.Models;
 
 namespace CoreAngular.Core
@@ -8,7 +9,7 @@ namespace CoreAngular.Core
     {
         Task<Vehicle> GetVehicle(int id, bool includeRelated = true);
 
-        Task<IEnumerable<Vehicle>> GetVehicles();
+        Task<IEnumerable<Vehicle>> GetVehicles(Filter filter);
 
         void Add(Vehicle vehicle);
 
