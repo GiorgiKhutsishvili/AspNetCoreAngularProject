@@ -9,7 +9,7 @@ namespace CoreAngular.Core
     {
         Task<Vehicle> GetVehicle(int id, bool includeRelated = true);
 
-        Task<IEnumerable<Vehicle>> GetVehicles(Filter filter);
+        Task<IEnumerable<Vehicle>> GetVehicles(VehicleQuery filter);
 
         void Add(Vehicle vehicle);
 
