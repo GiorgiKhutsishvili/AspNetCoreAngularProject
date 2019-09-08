@@ -13,6 +13,8 @@ import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
 import { AppComponent } from './app.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { PaginationComponent } from './shared/pagination.component'
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { PaginationComponent } from './shared/pagination.component'
     VehicleFormComponent,
     NavMenuComponent,
     VehicleListComponent,
-    PaginationComponent
+    PaginationComponent,
+    ViewVehicleComponent
   ],
   imports: [
     FormsModule,
@@ -28,6 +31,7 @@ import { PaginationComponent } from './shared/pagination.component'
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
+    NgbModule,
     ToastrModule.forRoot({
       timeOut: 5000,
       positionClass: 'toast-top-right',
@@ -36,7 +40,8 @@ import { PaginationComponent } from './shared/pagination.component'
     RouterModule.forRoot([
       { path: '', redirectTo: 'vehicles', pathMatch: 'full' },
       { path: 'vehicles/new', component: VehicleFormComponent },
-      { path: 'vehicles/:id', component: VehicleFormComponent },
+      { path: 'vehicles/edit/:id', component: VehicleFormComponent },
+      { path: 'vehicles/:id', component: ViewVehicleComponent },
       { path: 'vehicles', component: VehicleListComponent }
     ])
   ],

@@ -35,7 +35,7 @@ export class VehicleFormComponent implements OnInit {
     private vehicleService: VehicleService
   ) {
     route.params.subscribe(p => {
-      this.vehicle.id = +p['id'];
+      this.vehicle.id = +p['id'] || 0;
     });
   }
 
@@ -63,24 +63,6 @@ export class VehicleFormComponent implements OnInit {
       if (err.status == 404)
         this.router.navigate(['/home']);
     });
-
-    // this.vehicleService.getVehicle(this.vehicle.id)
-    //   .subscribe(v => {
-    //     this.vehicle = v;
-    //   }, err => {
-    //     if(err.status == 404)
-    //       this.router.navigate(['/home']);
-    //   });
-
-    // this.vehicleService.getMakes().subscribe(makes => {
-    //   this.makes = makes;
-
-    //   console.log("MAKES", this.makes);
-
-    //   this.vehicleService.getFeatures()
-    //   .subscribe(features => this.features = features);
-    // });
-
 
   }
 
@@ -117,17 +99,11 @@ export class VehicleFormComponent implements OnInit {
   }
 
   submit() {
-    if (this.vehicle.id) {
-      this.vehicleService.update(this.vehicle)
-        .subscribe(x => {
-          this.toastrService.success('The vehicle was successfully updated');
-        })
-    }
-    else {
-      this.vehicleService.create(this.vehicle)
-        .subscribe(x => console.log(x));
-    }
-
+    var result$ = (this.vehicle.id) ? this.vehicleService.update(this.vehicle) : this.vehicleService.create(this.vehicle);
+    result$.subscribe(vehicle => {
+      this.toastrService.success('The vehicle was successfully updated');
+      this.router.navigate(['/vehicles/', this.vehicle.id]);
+    });
   }
 
   delete() {

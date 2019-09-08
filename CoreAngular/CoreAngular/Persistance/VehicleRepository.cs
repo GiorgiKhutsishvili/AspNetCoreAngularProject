@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using CoreAngular.Core;
 using CoreAngular.Core.Models;
 using CoreAngular.Extensions;
+using vega.Core.Models;
 
 namespace CoreAngular.Persistance
 {
@@ -33,20 +34,22 @@ namespace CoreAngular.Persistance
                 .SingleOrDefaultAsync(v => v.Id == id);
         }
 
-        public async Task<IEnumerable<Vehicle>> GetVehicles(VehicleQuery queryObj)
+        public async Task<QueryResult<Vehicle>> GetVehicles(VehicleQuery queryObj)
         {
+            var result = new QueryResult<Vehicle>();
+
             var query = context.Vehicles
-                .Include(v => v.Model)
-                  .ThenInclude(m => m.Make)
-                .Include(v => v.Features)
-                  .ThenInclude(vf => vf.Feature).AsQueryable();
+              .Include(v => v.Model)
+                .ThenInclude(m => m.Make)
+              .Include(v => v.Features)
+                .ThenInclude(vf => vf.Feature)
+              .AsQueryable();
 
             if (queryObj.MakeId.HasValue)
                 query = query.Where(v => v.Model.MakeId == queryObj.MakeId.Value);
 
             if (queryObj.ModelId.HasValue)
                 query = query.Where(v => v.ModelId == queryObj.ModelId.Value);
-
 
             var columnsMap = new Dictionary<string, Expression<Func<Vehicle, object>>>()
             {
@@ -55,15 +58,18 @@ namespace CoreAngular.Persistance
                 ["contactName"] = v => v.ContactName
             };
 
-            
             query = query.ApplyOrdering(queryObj, columnsMap);
+
+            result.TotalItems = await query.CountAsync();
 
             query = query.ApplyPaging(queryObj);
 
-            return await query.ToListAsync();
+            result.Items = await query.ToListAsync();
+
+            return result;
         }
-         
-        
+
+
 
         public void Add(Vehicle vehicle)
         {
