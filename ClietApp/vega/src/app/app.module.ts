@@ -11,14 +11,16 @@ import { VehicleService } from './services/vehicle.service';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
 import { AppComponent } from './app.component';
-import { VehicleListComponent } from './vehicle-list/vehicle-list.component'
+import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
+import { PaginationComponent } from './shared/pagination.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     VehicleFormComponent,
     NavMenuComponent,
-    VehicleListComponent
+    VehicleListComponent,
+    PaginationComponent
   ],
   imports: [
     FormsModule,
