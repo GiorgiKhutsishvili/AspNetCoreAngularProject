@@ -14,6 +14,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using CoreAngular.Core;
+using CoreAngular.Core.Models;
 using CoreAngular.Persistance;
 
 namespace AspNetCoreAngular
@@ -33,6 +34,8 @@ namespace AspNetCoreAngular
             services.AddCors(option => option.AddPolicy("VegaPolicy", builder => {
                 builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials();
             }));
+
+            services.Configure<PhotoSettings>(Configuration.GetSection("PhotoSettings"));
 
             //services.AddAutoMapper(this.GetType().Assembly);
             //services.AddAutoMapper(typeof(Startup));

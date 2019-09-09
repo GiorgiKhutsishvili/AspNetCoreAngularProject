@@ -31,7 +31,7 @@ export class ViewVehicleComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.vehicleService.getVehicles(this.vehicleId)
+    this.vehicleService.getVehicle(this.vehicleId)
       .subscribe(v => this.vehicle = v,
         err => {
           if (err.status == 404) {

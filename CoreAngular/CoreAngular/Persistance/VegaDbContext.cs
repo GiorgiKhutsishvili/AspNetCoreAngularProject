@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CoreAngular.Core.Models;
 
 namespace AspNetCoreAngular.Persistance
 {
@@ -13,6 +14,8 @@ namespace AspNetCoreAngular.Persistance
         public DbSet<Make> Makes { get; set; }
         public DbSet<Model> Models { get; set; }
         public DbSet<Feature> Features { get; set; }
+
+        public DbSet<Photo> Photos { get; set; }
 
         public VegaDbContext(DbContextOptions<VegaDbContext> options)
             : base(options)

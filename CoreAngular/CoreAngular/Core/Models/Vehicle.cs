@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations.Schema;
+using CoreAngular.Core.Models;
 
 namespace CoreAngular.Models
 {
@@ -25,9 +26,12 @@ namespace CoreAngular.Models
 
         public ICollection<VehicleFeature> Features { get; set; }
 
+        public ICollection<Photo> Photos { get; set; }
+
         public Vehicle()
         {
             Features = new Collection<VehicleFeature>();
+            Photos = new Collection<Photo>();
         }
     }
 }

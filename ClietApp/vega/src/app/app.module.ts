@@ -13,7 +13,6 @@ import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
 import { AppComponent } from './app.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { PaginationComponent } from './shared/pagination.component'
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
 
 @NgModule({
@@ -31,7 +30,6 @@ import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule,
     ToastrModule.forRoot({
       timeOut: 5000,
       positionClass: 'toast-top-right',
