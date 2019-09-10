@@ -17,7 +17,7 @@ using CoreAngular.Core;
 using CoreAngular.Core.Models;
 using CoreAngular.Persistance;
 
-namespace AspNetCoreAngular
+namespace CoreAngular
 {
     public class Startup
     {
@@ -42,6 +42,7 @@ namespace AspNetCoreAngular
 
             services.AddScoped<IVehicleRepository, VehicleRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IPhotoRepository, PhotoRepository>();
 
             services.AddAutoMapper();
 
