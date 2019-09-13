@@ -64,6 +64,7 @@ namespace CoreAngular
                 app.UseHsts();
             }
 
+            app.UseStaticFiles();
             app.UseHttpsRedirection();
             app.UseCors("VegaPolicy");
             app.UseMvc();

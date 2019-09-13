@@ -63,10 +63,12 @@ namespace CoreAngular.Controllers
             if (!photoSettings.IsSupported(file.FileName))
                 return BadRequest("Invalid File Type");
 
+            var path = "C:\\Users\\USER\\Desktop\\AspNetCoreAngularProject\\CoreAngular\\CoreAngular\\ClietApp\\vega\\src\\assets";
 
-            var uploadsFolderPath = Path.Combine(host.WebRootPath, "Uploads");
+             //var uploadsFolderPath = Path.Combine(host.WebRootPath, "Uploads");
+            var uploadsFolderPath = Path.Combine(path, "photos");
 
-            if (!Directory.Exists(uploadsFolderPath))
+             if (!Directory.Exists(uploadsFolderPath))
                 Directory.CreateDirectory(uploadsFolderPath);
 
             var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);

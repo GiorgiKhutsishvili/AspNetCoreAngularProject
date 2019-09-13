@@ -29,7 +29,7 @@ namespace AspNetCoreAngular.Migrations
                         .IsRequired()
                         .HasMaxLength(255);
 
-                    b.Property<int?>("VehicleId");
+                    b.Property<int>("VehicleId");
 
                     b.HasKey("Id");
 
@@ -134,7 +134,8 @@ namespace AspNetCoreAngular.Migrations
                 {
                     b.HasOne("CoreAngular.Models.Vehicle")
                         .WithMany("Photos")
-                        .HasForeignKey("VehicleId");
+                        .HasForeignKey("VehicleId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("CoreAngular.Models.Model", b =>
