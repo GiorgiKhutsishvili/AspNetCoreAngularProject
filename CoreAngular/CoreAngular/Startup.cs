@@ -14,9 +14,10 @@ using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using CoreAngular.Core;
+using CoreAngular.Core.Models;
 using CoreAngular.Persistance;
 
-namespace AspNetCoreAngular
+namespace CoreAngular
 {
     public class Startup
     {
@@ -34,11 +35,14 @@ namespace AspNetCoreAngular
                 builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials();
             }));
 
+            services.Configure<PhotoSettings>(Configuration.GetSection("PhotoSettings"));
+
             //services.AddAutoMapper(this.GetType().Assembly);
             //services.AddAutoMapper(typeof(Startup));
 
             services.AddScoped<IVehicleRepository, VehicleRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IPhotoRepository, PhotoRepository>();
 
             services.AddAutoMapper();
 
@@ -60,6 +64,7 @@ namespace AspNetCoreAngular
                 app.UseHsts();
             }
 
+            app.UseStaticFiles();
             app.UseHttpsRedirection();
             app.UseCors("VegaPolicy");
             app.UseMvc();
